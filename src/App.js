@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Buttons from './Components/buttons/Buttons';
+import Escena from './Components/escena/Escena'
 
-function App() {
+const App = _ => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Buttons />
+      <Escena param='0' />
+      <Escena param='1' />
+      <Escena param='2' />
+      <Escena param='3' />
+
     </div>
   );
 }
