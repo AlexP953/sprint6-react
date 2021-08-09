@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 export const Round = styled.p`
     width:85%;
@@ -9,13 +8,8 @@ export const Round = styled.p`
     margin-top:10px;
     border-radius: 50px;
     border: 5px solid black;
+    background-color:${({isRight}) => isRight ? 'green' : 'white'}
 
-
-
-
-    &:focus{
-        background-color:pink;
-    }}
 `
 
 export const ButtonsStyled = styled.div`
