@@ -2,8 +2,7 @@ import './App.css';
 import Escena from './Components/escena/Escena';
 import React, { useState } from 'react'
 import Buttons from './Components/buttons/Buttons';
-
-
+import Provider from './Components/Provider';
 
 
 const App = _ => {
@@ -13,24 +12,26 @@ const App = _ => {
   const cambiaEstado = () => setEstado(true);
 
 
+
   const noLogged =
-      <div>
-        <p>Bienvenido, púlsame para comenzar</p>
-        <button onClick={() => cambiaEstado()}>PÚLSAME</button>
-      </div>
+    <div>
+      <p>Bienvenido, púlsame para comenzar</p>
+      <button onClick={() => cambiaEstado()}>PÚLSAME</button>
+    </div>
 
 
   const logged =
-
-    <div>
-      <Buttons />
+    <Provider>
       <div>
-        <Escena param={0} />
-        <Escena param={1} />
-        <Escena param={2} />
-        <Escena param={3} />
+        <Buttons />
+        <div>
+          <Escena param={0} />
+          <Escena param={1} />
+          <Escena param={2} />
+          <Escena param={3} />
+        </div>
       </div>
-    </div>
+    </Provider>
 
   return (
     <div>
